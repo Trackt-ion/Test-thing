@@ -2,17 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PerlinNoise : MonoBehaviour
+public class PerlinNoise 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    long seed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public PerlinNoise(long seed)
+    { this.seed = seed; }
+
+    public int getNoise(int x,int range) {
+        int chunkSize = 8;
+
+        int chunkIndex = x / 8;
+
+        int prog = (x % chunkSize) / (chunkSize * 1f);
+
     }
+        
 }
